@@ -14,14 +14,14 @@ read -p "Press [Enter] for ESXi use or CTRL-C to exit."
 clear
 echo "Copying your new wildcard SSL files to: $2-`date +r'%Fr'`"
 mkdir $2-`date +"%F"`
-cp /etc/letsencrypt/live/$2/fullchain.pem ./$2-`date +"%F"`/castore.pem
-cp /etc/letsencrypt/live/$2/cert.pem ./$2-`date +"%F"`/rui.cert
-cp /etc/letsencrypt/live/$2/privkey.pem ./$2-`date +"%F"`/rui.key
+cp /etc/letsencrypt/live/$2/fullchain.pem ./$2-`date +'%F'`/castore.pem
+cp /etc/letsencrypt/live/$2/cert.pem ./$2-`date +'%F'`/rui.crt
+cp /etc/letsencrypt/live/$2/privkey.pem ./$2-`date +'%F'`/rui.key
 echo "done"
 echo "\n"
-echo "The files now in ./$2-`date +"F"`, listed below"
+echo "The files now in ./$2-`date +'F'`, listed below"
 echo "should be place in /etc/vmware/ssl/ on the ESXi Host."
-ls -h ./$2-`date +"%F"`/
+ls -h ./$2-`date +'%F'`/
 echo "----------------------------------------------------------------------"
 echo "\n"
 echo "NOTE: If certs fail on ESXI host, run /sbin/generate-certificates and services.sh restart."
