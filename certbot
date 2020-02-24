@@ -1,0 +1,9 @@
+#
+# certbot helper for Ubuntu Cockpit, comes with cert.sh
+# Yes, I know this is kind of cheezy. Just remember to update your SSL path.
+#
+certbot renew
+cat /etc/letsencrypt/live/yourdomain.tld/fullchain.pem > whole.cert
+cat /etc/letsencrypt/live/yourdomain.tld/privkey.pem >> whole.cert
+cp -f /etc/letsencrypt/live/yourdomain.tld/whole.cert /etc/cockpit/ws-certs.d/
+service cockpit restart

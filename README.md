@@ -1,11 +1,21 @@
 # SA-Tools-wcSSL
- System admins tools, wildcard SSL setup
---------------------------------------------
+ System admins tools, Starting with a wildcard SSL setup
+-----------------------------------------------------------
 
-This script was meant to follow up on the outline here: https://chrismish.com/technical/esxi-host-ssl
+wildcard.sh was meant to follow up on the outline here: https://chrismish.com/technical/esxi-host-ssl
 ...to automate part of a larger process. I figured it would come in handy for other uses too and that maybe others could find use for, or want to improve it.
 
 Feel free to Discord me for anything but support. I just don't have the time: Cygnostik#1337
+
+Other little time savers added so far:
+cert.sh <youremail> <server.hostname.tld>
+
+#####
+## This one is an odd 'hack' because Ubuntu Cockpit certbot support is lacking.
+## Toss the file "certbot" into your /etc/cron.weekly/certbot
+## it will check SSL status and renew if needed soon.
+## Then combine the cert & private key into your Cockpit ssl directory.
+## If any issues, check that the 0-* snakeoil cert is removed pre-reload.
 
 --- More soon! ---
 
