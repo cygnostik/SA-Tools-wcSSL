@@ -5,6 +5,8 @@
 wildcard.sh was meant to follow up on the outline here: https://chrismish.com/technical/esxi-host-ssl
 ...to automate part of a larger process. I figured it would come in handy for other uses too and that maybe others could find use for, or want to improve it.
 
+**Update**: These fully valid, plain ol' wild card SSL certificates are verified working ESXi 6.5 and 6.7 both.
+
 Feel free to Discord me for anything but support. I just don't have the time: Cygnostik#1337
 
 Other little time savers added so far:
